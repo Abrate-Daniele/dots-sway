@@ -1,0 +1,73 @@
+/* Stile generale */
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(40, 42, 54, 0.7);
+  color: #f8f8f2;
+  border-bottom: 2px solid rgba(68, 71, 90, 0.7);
+  padding: 6px 0;
+  min-height: 34px;
+}
+
+/* Workspace */
+#workspaces button {
+  color: #f8f8f2;
+  padding: 0 14px;
+  margin: 0 6px;
+  border-radius: 6px;
+  background: transparent;
+}
+#workspaces button.focused {
+  background: rgba(189, 147, 249, 0.85);
+  color: #282a36;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  background: rgba(255, 85, 85, 0.85);
+  color: #f8f8f2;
+}
+
+/* Moduli principali */
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#tray,
+#pulseaudio {
+  padding: 6px 16px;
+  margin: 0 3px;
+  border-radius: 8px;
+  background: rgba(68, 71, 90, 0.6);
+  color: #f8f8f2;
+}
+
+/* Colori specifici */
+#cpu {
+  color: #50fa7b;
+}
+#memory {
+  color: #ff79c6;
+}
+#temperature {
+  color: #ffb86c;
+}
+#battery {
+  color: #8be9fd;
+}
+#network {
+  color: #f1fa8c;
+}
+
+/* Modulo volume */
+#pulseaudio {
+  color: #ff79c6;
+}
+#pulseaudio:hover {
+  background: rgba(98, 114, 164, 0.4);
+}
