@@ -110,3 +110,7 @@ alias clock='tty-clock -c -C 5 -b'
 alias performance='powerprofilesctl set performance'
 alias battery='powerprofilesctl set power-saver'
 alias balanced='powerprofilesctl set balanced'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

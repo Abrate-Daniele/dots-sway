@@ -1,0 +1,11 @@
+swaylock \
+  --image ~/Immagini/Sfondi/Lock.png \
+  --color 282a36 \
+  --inside-color 282a36 \
+  --ring-color bd93f9 \
+  --key-hl-color 50fa7b \
+  --text-color f8f8f2 \
+  --inside-ver-color 44475a \
+  --ring-ver-color 8be9fd \
+  --inside-wrong-color ff5555 \
+  --ring-wrong-color ff5555

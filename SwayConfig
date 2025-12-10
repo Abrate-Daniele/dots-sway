@@ -72,16 +72,18 @@ client.background       #282a36
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 # Gestione inattività con swayidle
-exec_always swayidle -w \
-    timeout 300 'brightnessctl -s set 50%' \
-    resume 'brightnessctl -r' \
-    timeout 600 'swaylock -i /home/dany/Immagini/Sfondi/Lock.png --scaling fill' \
-    timeout 900 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -i /home/dany/Immagini/Sfondi/Lock.png --scaling fill'
+#exec_always swayidle -w \
+#    timeout 300 'brightnessctl -s set 50%' \
+#    resume 'brightnessctl -r' \
+#    timeout 600 'swaylock -i ~/Immagini/Sfondi/Lock.png' \
+#    timeout 900 'swaymsg "output * dpms off"' \
+#    resume 'swaymsg "output * dpms on"' \
+#    before-sleep 'swaylock -i ~/Immagini/Sfondi/Lock.png'
+
+exec swayidle -w
 
 # Scorciatoia per bloccare manualmente lo schermo
-bindsym $mod+Shift+b exec swaylock -i /home/dany/Immagini/Sfondi/Lock.png --scaling fill
+bindsym $mod+Shift+b exec ~/.local/bin/lock
 
 ### Input configuration
 #
@@ -127,6 +129,9 @@ input "type:touchpad" {
 
     # Start Obsidian
     bindsym $mod+o exec flatpak run md.obsidian.Obsidian
+
+    # Start Thunar
+    bindsym $mod+t exec thunar
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
